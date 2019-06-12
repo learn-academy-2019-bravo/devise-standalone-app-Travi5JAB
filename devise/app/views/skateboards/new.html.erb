@@ -1,0 +1,6 @@
+<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<h1>New Skateboard</h1>
+
+<%= render 'form', skateboard: @skateboard %>
+
+<%= link_to 'Back', skateboards_path %>

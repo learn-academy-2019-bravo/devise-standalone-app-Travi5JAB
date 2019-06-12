@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class = "signOut">
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+    <br/>
+    <%=current_user.name%>
+    <br/>
+    <%=current_user.email%>
+</div>
+<h1>All Skateboards</h1>
+
+<br/>
+<button onClick = "window.location.href='/myboards'">My Boards</button>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model year</th>
+      <th>Model</th>
+      <th>Name</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @skateboards.each do |skateboard| %>
+      <tr>
+        <td><%= skateboard.brand %></td>
+        <td><%= skateboard.model_year %></td>
+        <td><%= skateboard.model %></td>
+        <td><%= skateboard.user.name %></td>
+        <td><%= link_to 'Show', skateboard %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<br>
+
+<%= link_to 'New Skateboard', new_skateboard_path %>

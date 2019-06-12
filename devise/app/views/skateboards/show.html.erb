@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @skateboard.brand %>
+</p>
+
+<p>
+  <strong>Model year:</strong>
+  <%= @skateboard.model_year %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @skateboard.model %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @skateboard.user_id %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @user.name %>
+</p>
+
+<%= link_to 'Edit', edit_skateboard_path(@skateboard) %> |
+<%= link_to 'Back', skateboards_path %>
